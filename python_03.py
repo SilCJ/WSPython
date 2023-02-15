@@ -17,4 +17,4 @@ numero_2= int(numero_2)
 
 resultado= numero_1/numero_2
 
-print (f"Mi nombre es {nombre}, mi edad es {edad}, soy de la ciudad de {ciudad} y mi resultado de la división es {resultado}")
+print(f"Mi nombre es {nombre}, mi edad es {edad}, soy de la ciudad de {ciudad} y mi resultado de la división es {resultado}")

@@ -1,4 +1,5 @@
 from diccionario import titulo
+
 def add_course(lst: list):
     print("=" - 80)
     print("Agregar un nuevo curso")
@@ -12,12 +13,12 @@ def add_course(lst: list):
         "titulo": titulo,
         "número de alumnos": num_alumnos,
         "número de clases": num_clases,
-        "esatatus": estatus
+        "estatus": estatus
     }
     lst.append(course)
     print(lst)
 
-def search(title: str):
+def search(lst: list):
     print("=" - 80)
     print("Búsqueda de cursos")
     print("=" - 80)
@@ -25,7 +26,7 @@ def search(title: str):
 
     "curso": curso
     resultado = None
-    for course in courses:
+    for course in COURSES:
     if course.get("Titulo")== "curso":
         resultado = course
         break
@@ -36,18 +37,29 @@ def search(title: str):
         print("No existe coincidencias con algun curso")
 
     print(f'El curso que buscas es {titulo}')
+
+
 def mod_estatus(lst: list):
     print("=" - 80)
     print("Cambiar estatus del curso")
     print("=" - 80)
 
-    ESTATUS = ("ACTIVO", "INACTIVO")
+
+
+    ESTATUS = ("ACTIVO", "INACTIVO", "SALIR")
 
     while True:
         actions_list = " | ".join(ESTATUS)
         action = input(f"Seleccione una accion: {actions_list}")
         if action == ESTATUS[0]:
-            course
+            COURSES[course][estatus][xcourse]="Activo"
+        elif action == ESTATUS[1]:
+            COURSES[course][estatus][xcourse]="Inactivo"
+        elif action == ESTATUS[2]:
+            break
+        else:
+            print(f"Operacion no soportada: {action}")
+
 
 def view_course(lst: list):
         print("=" - 80)
@@ -65,13 +77,13 @@ def view_course(lst: list):
         actions_list = " | ".join(ACTIONS)
         action = input(f"Seleccione una accion: {actions_list}")
         if action == ACTIONS[0]:
-            search(COURSE)
+            search(COURSES)
         elif action == ACTIONS[1]:
-            add_course(COURSE)
+            add_course(COURSES)
         elif action == ACTIONS[2]:
-            mod_estatus(COURSE)
+            mod_estatus(COURSES)
         elif action == ACTIONS[3]:
-            view_course(COURSE)
+            view_course(COURSES)
         elif action == ACTIONS[4]:
             break
         else:

@@ -27,7 +27,7 @@ class Jugador:
     def __init__(self, nombre: str, email: str, pts_ganados: int, raza: Raza, estado: Estado, **kwargs):
         self.__nombre = nombre
         self.__email = email
-        self.__pts_ganados = 0
+        self.__pts_ganados = pts_ganados
         self.__raza = raza
         self.__estado = estado
 
@@ -58,6 +58,7 @@ def crear_jugador():
     imp_header("CREAR JUGADORES")
     nombre = input("Nombre: ")
     email = input("Email: ")
+    pts_ganados = 0
     raza = input("Raza: ")
     estado = input("Estado: ")
     jugador = Jugador(nombre, email, pts_ganados, Raza[raza], Estado[estado])

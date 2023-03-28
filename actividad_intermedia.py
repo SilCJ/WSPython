@@ -28,8 +28,8 @@ def search(lst: list):
     resultado = None
     for course in COURSES:
     if course.get("Titulo")== "curso":
-        resultado = course
-        break
+    resultado = course
+    break
 
     if resultado:
         print(f"El curso que buscas es {resultado}")

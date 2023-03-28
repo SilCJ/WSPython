@@ -110,7 +110,7 @@ MENU = {
     "jugar": partidas_aleatorias,
     "resultado": resultado
 }
-
+#MENÚ
 OPTIONS = ' || '.join(MENU.keys())
 
 while True:
@@ -119,6 +119,7 @@ while True:
         MENU[action]()
     else:
         print(f"Accion not soportada: {action}")
+
 
 
 

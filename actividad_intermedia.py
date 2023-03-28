@@ -5,8 +5,8 @@ def add_course(lst: list):
     print("Agregar un nuevo curso")
     print("=" - 80)
     titulo = input("Titulo del curso: ")
-    num_alumnos = input("Cuántos alumnos son? ")
-    num_clases = input("Cantidad de clases ")
+    num_alumnos = input("Cuántos alumnos son?: ")
+    num_clases = input("Cantidad de clases: ")
     estatus = input("Estatus del curso Activo/Inactivo: ")
 
     course = {

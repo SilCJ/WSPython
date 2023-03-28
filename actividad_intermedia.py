@@ -2,7 +2,7 @@ from diccionario import titulo
 
 def add_course(lst: list):
     print("=" - 80)
-    print("Agregar un nuevo curso")
+    print("Agregar un nuevo curso.")
     print("=" - 80)
     titulo = input("Titulo del curso: ")
     num_alumnos = input("Cuántos alumnos son?: ")
